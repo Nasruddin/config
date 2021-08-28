@@ -22,7 +22,7 @@ server:
 eureka:
   client:
     service-url:
-      default-zone: eureka-server/eureka
+      default-zone: discoveryservice:8761/eureka
 
 
 logging:
