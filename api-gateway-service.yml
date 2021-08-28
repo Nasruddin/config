@@ -1,13 +1,8 @@
-server:
-  port: 8762
 eureka:
-  instance:
-    hostname: discoveryservice
   client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    service-url:
+      default-zone: http://discoveryservice:8761/eureka/
+
 # Disable accessing services using service name (i.e. students-service).
 # They should be only accessed through the path defined below.
 zuul:
