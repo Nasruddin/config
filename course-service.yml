@@ -1,13 +1,7 @@
 spring:
   application:
     name: course-service
-  config:
-    import: optional:configserver:config-server
-  cloud:
-    config:
-      discovery:
-        enabled: true
-        service-id: config-server
+ 
 
   h2:
     console:
@@ -28,7 +22,7 @@ server:
 eureka:
   client:
     service-url:
-      default-zone: discoveryservice:8761/eureka
+      default-zone: discoveryservice/eureka
 
 
 logging:
