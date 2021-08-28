@@ -20,9 +20,13 @@ server:
   port: 8200
 
 eureka:
+  instance:
+    hostname: discoveryservice
   client:
-    service-url:
-      default-zone: discoveryservice/eureka
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
 
 logging:
