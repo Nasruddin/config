@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      default-zone: http://discoveryservice:8761/eureka/
+      default-zone: ${EUREKA_SERVER:http://localhost:8761/eureka}
 
 # Disable accessing services using service name (i.e. students-service).
 # They should be only accessed through the path defined below.
