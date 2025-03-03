@@ -1,2 +1,4 @@
 server:
   port: 8300
+polar:
+  greeting: Calling from config server
